@@ -16,7 +16,7 @@ object RetroController
     val API_KEY = "46ba9445151f45feb3cf21b3bae4a63e"
 
     val retroClient = Retrofit.Builder()
-        .baseUrl("https://newsapi.org/v2/"
+        .baseUrl("https://newsapi.org/"
         ).addConverterFactory(GsonConverterFactory.create())
         .build()
 

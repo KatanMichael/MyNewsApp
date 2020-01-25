@@ -9,6 +9,8 @@ class MainViewModel : ViewModel()
 {
     val repository = Repository
 
+
+
     var headLinesList :  MutableLiveData<ArrayList<Article>>
     init {
         headLinesList = repository.initHeadLinesList()

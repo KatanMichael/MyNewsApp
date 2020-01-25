@@ -11,6 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.michael.mynewsapp.R
 import com.michael.mynewsapp.adapters.RecycleNewsAdapter
+import com.michael.mynewsapp.controllers.Repository
 import com.michael.mynewsapp.models.Article
 import com.michael.mynewsapp.viewmodels.MainViewModel
 import kotlinx.android.synthetic.main.main_fragment.*
@@ -40,6 +41,12 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?)
     {
+
+        val repository = Repository
+
+        repository.updateContext(activity!!.applicationContext)
+
+
         val recycleNewsAdapter = RecycleNewsAdapter(view.context, ArrayList<Article>())
 
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)

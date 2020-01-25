@@ -8,7 +8,7 @@ import retrofit2.http.Query
 interface newsRetroService
 {
 
-    @GET("/top-headlines")
+    @GET("/v2/top-headlines")
     fun getHeadlinesByCountry(@Query("apiKey") apiKey : String,
                               @Query("country")country:String = "il",
                               @Query("category")category: String = "general",
